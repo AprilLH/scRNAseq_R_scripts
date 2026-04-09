@@ -1,0 +1,2 @@
+#convert rmd to r script 
+knitr::purl("R.Rmd", output = "rscript.R", documentation = 2)
