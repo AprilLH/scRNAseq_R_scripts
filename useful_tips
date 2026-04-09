@@ -1,2 +1,9 @@
 #convert rmd to r script 
 knitr::purl("R.Rmd", output = "rscript.R", documentation = 2)
+
+#common genes
+common_genes      <- intersect(gene_list_A, gene_list_B)
+unique_to_A     <- setdiff(gene_list_A, gene_list_B)
+
+# save dataframe/list
+write.csv(common_genes, "common_genes.csv",  row.names = FALSE)
